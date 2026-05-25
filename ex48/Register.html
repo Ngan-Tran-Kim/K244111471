@@ -1,0 +1,157 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <style>
+        body{
+            background:#9cc3eb;
+        }
+        .container{
+            width:800px;
+            margin:auto;
+        }
+        .logo{
+            text-align:center;
+            margin:20px;
+        }
+        .logo img{
+            width:300px;
+        }
+        h1{
+            text-align:center;
+        }
+        p{
+            text-align:center;
+        }
+        table{
+            width:100%;
+        }
+        td{
+            padding:5px;
+        }
+        input, select, textarea{
+            padding:5px;
+        }
+        textarea{
+            width:100%;
+            height:120px;
+        }
+        .buttons{
+            text-align:center;
+            margin-top:20px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div class="container">
+        <div class="logo">
+            <img src="images/jackson.gif">
+        </div>
+        <h1>Registration Form</h1>
+        <p>Register your Jackson Electronics product here</p>
+        <form id="regForm">
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text"></td>
+                    <td>Last Name:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Address #1:</td>
+                    <td colspan="3"><input type="text" style="width:100%"></td>
+                </tr>
+                <tr>
+                    <td>Address #2:</td>
+                    <td colspan="3"><input type="text" style="width:100%"></td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text"></td>
+                    <td>State: <input type="text" size="5"></td>
+                    <td>Zip: <input type="text" size="8"></td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td colspan="3">
+                    <select>
+                        <option>United States</option>
+                        <option>Vietnam</option>
+                        <option>Japan</option>
+                    </select>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <table>
+                <tr>
+                    <td>Product:</td>
+                    <td>
+                    <select>
+                        <option>ScanMaster</option>
+                        <option>PrinterPro</option>
+                        <option>DataBox</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date Purchased:</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Serial #:</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Used for:</td>
+                    <td>
+                        <table style="width:100%; border-collapse:collapse;">
+                            <tr>
+                                <td style="padding:5px;">
+                                    <input type="radio" id="used1" name="used" value="home"> <label for="used1">Home</label><br>
+                                    <input type="radio" id="used2" name="used" value="business"> <label for="used2">Business</label><br>
+                                    <input type="radio" id="used3" name="used" value="government"> <label for="used3">Government</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input type="radio" id="used4" name="used" value="educational"> <label for="used4">Educational Institution</label><br>
+                                    <input type="radio" id="used5" name="used" value="other"> <label for="used5">Other</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>System (check all that apply):</td>
+                    <td>
+                        <table style="width:100%; border-collapse:collapse;">
+                            <tr>
+                                <td style="padding:5px;">
+                                    <input type="checkbox" id="sys1"> <label for="sys1">Windows</label><br>
+                                    <input type="checkbox" id="sys2"> <label for="sys2">Macintosh</label>
+                                </td>
+                                <td style="padding:5px;">
+                                    <input type="checkbox" id="sys3"> <label for="sys3">UNIX</label><br>
+                                    <input type="checkbox" id="sys4"> <label for="sys4">Other</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+
+            <table style="width:100%;">
+                <tr>
+                    <td style="padding:5px; vertical-align: top;">Comments?:</td>
+                    <td style="padding:5px;"><textarea></textarea></td>
+                </tr>
+            </table>
+            <div class="buttons">
+                <input type="button" value="Click to register" onclick="registerForm()">
+                <input type="button" value="Click to cancel" onclick="cancelForm()">
+            </div>
+        </form>
+        </div>
+    </body>
+</html>

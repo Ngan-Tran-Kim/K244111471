@@ -1,0 +1,150 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Online Classifieds Search Form</title>
+    <style>
+        body {
+            background-color: #7fbfdf;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0;
+            background-color: #a8d8f0;
+            padding: 20px;
+            border: 2px solid #333;
+        }
+        h1 {
+            color: red;
+            text-align: left;
+            font-size: 28px;
+        }
+        hr {
+            border: 1px solid #333;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .radio-group, .checkbox-group {
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .checkbox-group {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        input[type="checkbox"]:checked {
+            accent-color: #00FF00;
+        }
+        .date-inputs {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .date-inputs input {
+            width: 100px;
+            padding: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 80px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .button-group {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .button-group img {
+            margin: 0 15px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Online Classifieds Search Form</h1>
+        <hr>
+
+        <form id="classifiedForm">
+            <div class="section-title">1) Search for a classified in the following sections:</div>
+            <div class="radio-group">
+                <div>
+                    <input type="radio" id="employment" name="section" value="Employment">
+                    <label for="employment">Employment</label>
+                </div>
+                <div>
+                    <input type="radio" id="personal" name="section" value="Personal">
+                    <label for="personal">Personal</label>
+                </div>
+                <div>
+                    <input type="radio" id="forsale" name="section" value="For Sale">
+                    <label for="forsale">For Sale</label>
+                </div>
+                <div>
+                    <input type="radio" id="miscellaneous" name="section" value="Miscellaneous">
+                    <label for="miscellaneous">Miscellaneous</label>
+                </div>
+                <div>
+                    <input type="radio" id="housing" name="section" value="Housing">
+                    <label for="housing">Housing</label>
+                </div>
+                <div>
+                    <input type="radio" id="allabove" name="section" value="All of the above">
+                    <label for="allabove">All of the above</label>
+                </div>
+            </div>
+
+            <div class="section-title">2) Search the following publications:</div>
+            <div class="checkbox-group">
+                <div>
+                    <input type="checkbox" id="midwest" name="publication" value="Midwest times">
+                    <label for="midwest">Midwest times</label><br>
+                    <input type="checkbox" id="greatlakes" name="publication" value="Great Lakes Classifieds">
+                    <label for="greatlakes">Great Lakes Classifieds</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="modern" name="publication" value="Modern News">
+                    <label for="modern">Modern News</label><br>
+                    <input type="checkbox" id="middleton" name="publication" value="Middleton Daily">
+                    <label for="middleton">Middleton Daily</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="employment_today" name="publication" value="Employment Today">
+                    <label for="employment_today">Employment Today</label><br>
+                    <input type="checkbox" id="cashtown" name="publication" value="Cashtown Daily News">
+                    <label for="cashtown">Cashtown Daily News</label>
+                </div>
+            </div>
+
+            <div class="section-title">3) From to</div>
+            <div class="date-inputs">
+                <input type="text" placeholder="mm/yy/yy">
+                to
+                <input type="text" placeholder="mm/dd/yy">
+            </div>
+
+            <div class="section-title">4) Enter a few keywords to describe the classified.</div>
+            <textarea id="keywords"></textarea>
+
+            <div class="section-title">5) Click one of the options below:</div>
+            <div class="button-group">
+                <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
+                    <img src="images/search.gif" alt="Search">
+                </button>
+                <img src="images/help.gif" alt="Help">
+                <button type="reset" style="background: none; border: none; padding: 0; cursor: pointer;">
+                    <img src="images/cancel.gif" alt="Cancel">
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
