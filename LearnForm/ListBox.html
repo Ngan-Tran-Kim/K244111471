@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Tiêu đề trang</title>
+</head>
+<body>
+    <form name="colorForm">
+        <h3>Select Background Color:</h3>
+        <select id="colorSelect" name="colorSelect" size="5" onchange="colorForm.selectedColor.value = this.value; colorForm.selectedColor.style.backgroundColor = this.value;">
+            <option value="lightgray">Light Gray</option>
+            <option value="lightblue">Light Blue</option>
+            <option value="lightgreen">Light Green</option>
+            <option value="lightyellow">Light Yellow</option>
+        </select>
+        <p>Your selected color is:</p>
+        <input type="text" id="selectedColor" name="selectedColor">
+    </form>
+
+    <form name="imgForm">
+        <h3>Select Image:</h3>
+        <select id="imageSelect" name="imageSelect" size="5" 
+                onchange="document.getElementById('imgLeft').src = this.value; document.getElementById('txtRight').value = this.value;">            <option value="images/logo_uel.png">Logo UEL</option>
+            <option value="images/logo_vnu.png">Logo VNU</option>
+            <option value="images/myavatar.png">My Avatar</option>
+        </select>
+        <p>Your selected image is:</p>
+        <img id="imgLeft" alt="Khung hiển thị ảnh" style="width: 200px; height: 200px; border: 1px solid #7f7f7f; 
+        display: inline-block; vertical-align: middle;">
+        <input type="text" id="txtRight" name="txtRight" style="vertical-align: bottom; margin-left: 10px; 
+        width: 250px;">    
+    </form>
+</body>
+</html>
