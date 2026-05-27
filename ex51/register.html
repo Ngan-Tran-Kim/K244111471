@@ -1,0 +1,151 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Newborn Registration Form</title>
+    <style type="text/css">
+        body {
+            background-color: #007575; 
+            color: #ffffff;            
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .registration-container {
+            width: 100%;
+            max-width: 700px;
+            padding: 10px 30px;
+        }
+
+        .header-area {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .page-heading {
+            text-align: center;
+            font-size: 32px;
+            font-weight: normal;
+            margin: 30px 0;
+            letter-spacing: 1px;
+        }
+
+        .form-row {
+            margin-bottom: 15px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        input[type="text"] {
+            border: none;
+            padding: 4px 6px;
+            font-size: 15px;
+            margin-left: 6px;
+            margin-right: 6px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        select[multiple] {
+            border: none;
+            padding: 2px;
+            font-size: 14px;
+            width: 180px;
+            height: 80px;
+            margin-left: 10px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .w-small { width: 70px; }
+        .w-medium { width: 120px; }
+        .w-large { width: 180px; }
+
+        .button-group {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .button-group button {
+            background-color: #efefef;
+            color: #000000;
+            border: 1px solid #767676;
+            padding: 4px 15px;
+            margin: 0 8px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .button-group button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <div class="header-area">
+            <img src="images/Logo.gif">
+        </div>
+
+        <h2 class="page-heading">Newborn Registration</h2>
+        <form action="#" method="post" id="registrationForm">
+            <div class="form-row">
+                Date: <input type="text" name="txtRegDate" class="w-medium" placeholder="mm/dd/yy">
+            </div>
+
+            <div class="form-row">
+                1) Infant's first name: <input type="text" name="txtInfantFirst" class="w-large">
+                Last: <input type="text" name="txtInfantLast" class="w-large">
+            </div>
+
+            <div class="form-row">
+                2) Medical Record #: <input type="text" name="txtMedicalRecord" class="w-medium">
+            </div>
+
+            <div class="form-row">
+                3) Date of birth: <input type="text" name="txtDob" class="w-medium" placeholder="mm/dd/yy">
+            </div>
+
+            <div class="form-row">
+                4) Birth weight : <input type="text" name="txtWeight" class="w-small">
+            </div>
+
+            <div class="form-row">
+                5) APGAR score : <input type="text" name="txtApgar" class="w-small">
+            </div>
+
+            <div class="form-row">
+                6) Mother's first name: <input type="text" name="txtMotherFirst" class="w-large">
+                Last: <input type="text" name="txtMotherLast" class="w-large">
+            </div>
+
+            <div class="form-row">
+                7) Father's first name : <input type="text" name="txtFatherFirst" class="w-large">
+                Last: <input type="text" name="txtFatherLast" class="w-large">
+            </div>
+
+            <div class="form-row" style="align-items: flex-start;">
+                <div style="width: 170px; line-height: 1.4;">
+                    8) Physician (check all that apply:)
+                </div>
+                <select name="selPhysicians" multiple size="4">
+                    <option value="Dr. Warren Albert">Dr. Warren Albert</option>
+                    <option value="Dr. Maria Alvarez">Dr. Maria Alvarez</option>
+                    <option value="Dr. Karen Brinkman">Dr. Karen Brinkman</option>
+                    <option value="Dr. Micheal Kerry">Dr. Micheal Kerry</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Register</button>
+                <button type="reset">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
